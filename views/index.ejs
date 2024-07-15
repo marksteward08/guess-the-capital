@@ -1,0 +1,16 @@
+<%- include('header.ejs');%>
+
+<div class="wrapper">
+    <div class="container">
+        <h3>Score: <%= locals.score ? score : 0 %></h3>
+        <h1>Guess the Capital</h1>
+        <h2><%= locals.question ? question.country : 'Please refresh the page'; %></h2>
+
+        <form action="/" method="POST">
+            <input type="text" name="capital">
+            <input type="Submit" value="Submit">
+        </form>
+    </div>
+</div>
+
+<%- include('footer.ejs') %>

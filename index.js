@@ -21,10 +21,10 @@ let score = 0;
 let currentQuestion;
 
 db.query("SELECT * FROM capitals", (err, res) => {
-    if(err) {
-        console.error('Error: ' + err.message);
-    } else {
+    if(!err) {
         quiz = res.rows;
+    } else {
+        console.error('Error: ' + err.message);
     }
 });
 
